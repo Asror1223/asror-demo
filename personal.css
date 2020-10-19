@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* in this project I am basing my design on Mimic's page. 
+I have used my own code and when I had difficulty making some elements work, I looked them up online and also used some code from the original "portfolio page". I did my best not to copy everything, so I tried to build some elements on my own before looking up or outright copying them. I learned a lot from this project and hope to use this knowledge in my future projects*/
+
+html {
+    box-sizing: border-box;
+    /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #f5cac3;
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+    list-style-type: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #14213d;
+    display: block;
+    padding: 2rem;
+    font-size: 2.2rem;
+}
+
+li a:hover {
+    background-color: rgba(3, 4, 94, 0.2);
+    cursor: pointer;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-birthday-instagram-captions-1584723902.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#welcome-section h1 {
+    display: block;
+    padding: 1rem;
+    color: white;
+    font-family: sans-serif;
+    font-size: 6rem;
+    font-weight: 400;
+    background-color: rgba(3, 4, 94, 0.5);
+    text-align: center;
+    border-radius: 30px;
+}
+
+#welcome-section p {
+    display: block;
+    padding: 1rem;
+    color: white;
+    font-size: 2rem;
+    font-style: italic;
+    background-color: rgba(3, 4, 94, 0.5);
+    text-align: center;
+    border-radius: 30px;
+}
+
+/* End of welcome section 
+    Start of Project section*/
+
+#projects {
+    text-align: center;
+    background-color: #fff;
+    background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+    padding: 2rem 2rem;
+}
+
+.section-title {
+    color: #2a9d8f;
+    font-size: 4rem;
+    padding: 4rem 0.5rem;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+    border-bottom: 0.2rem solid #000;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+@media screen and (max-width: 720px) {
+    #welcome-section {
+        background-image: url("https://i.pinimg.com/originals/4d/b7/79/4db779765934ea6c898a864b1447234f.jpg");
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
+
+.project-title {
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+    color: black;
+}
+
+.project-title:hover {
+    color: #fcbf49;
+}
+
+.project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+
+.project {
+    background: #2a9d9088;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+    color: black;
+}
+
+.btn-show-all {
+    font-size: 2rem;
+    background: #2a9d9083;
+    transition: background 0.3s ease-out;
+}
+
+.btn-show-all:hover {
+    background: #fcbf49;
+}
+
+/*end of project section 
+start of contact section*/
+
+#contact {
+    text-align: center;
+    background-color: #f5cac3;
+    padding: 2rem 2rem;
+}
+
+.contact-header {
+    padding: 3rem;
+}
+
+.contact-links {
+    padding: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 3rem;
+}
+
+.contact-h2 {
+    font-size: 4rem;
+    color: #000;
+}
+
+.contact-p {
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.contact-p2 {
+    font-size: 1.5rem;
+    color: #000;
+} 
+
+.btn-link {
+    display: block;
+    padding: 1rem;
+    color: #370617;
+    font-weight: 700;
+    transition: 0.2s ease-in;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+
+.btn-link:hover {
+    transform: translateY(-8px);
+    color: #f1ff5c;
+    text-shadow: #f1ff5c 1px 0 10px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
